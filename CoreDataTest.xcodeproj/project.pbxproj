@@ -12,6 +12,7 @@
 		E951C85B2776580900721098 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E951C8592776580900721098 /* CoreDataTest.xcdatamodeld */; };
 		E951C85D2776580A00721098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E951C85C2776580A00721098 /* Assets.xcassets */; };
 		E951C8602776580A00721098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E951C85E2776580A00721098 /* LaunchScreen.storyboard */; };
+		E951C8682776639500721098 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951C8672776639500721098 /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E951C85C2776580A00721098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E951C85F2776580A00721098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E951C8612776580A00721098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E951C8672776639500721098 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				E951C8502776580900721098 /* AppDelegate.swift */,
 				E951C8542776580900721098 /* TaskListViewController.swift */,
+				E951C8672776639500721098 /* TaskViewController.swift */,
 				E951C85C2776580A00721098 /* Assets.xcassets */,
 				E951C85E2776580A00721098 /* LaunchScreen.storyboard */,
 				E951C8612776580A00721098 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E951C85B2776580900721098 /* CoreDataTest.xcdatamodeld in Sources */,
+				E951C8682776639500721098 /* TaskViewController.swift in Sources */,
 				E951C8552776580900721098 /* TaskListViewController.swift in Sources */,
 				E951C8512776580900721098 /* AppDelegate.swift in Sources */,
 			);
