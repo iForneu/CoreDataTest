@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class TaskViewController: UIViewController {
+    
+    var delegate: TaskViewControllerDelegate?
+    
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //MARK: - TextField
     private lazy var taskTextField: UITextField = {
@@ -18,7 +23,7 @@ class TaskViewController: UIViewController {
         return textField
     }()
     
-    //MARK: - Button
+    //MARK: - Buttons
     private lazy var saveButton: UIButton = {
         let button = UIButton()
         
@@ -94,6 +99,20 @@ class TaskViewController: UIViewController {
     }
     
     @objc private func save() {
+        guard let entityDescription = NSEntityDescription.entity(forEntityName: "Task", in: context) else {
+            return
+        }
+        guard let task = NSManagedObject(entity: entityDescription, insertInto: context) as? Task else { return }
+        task.name = taskTextField.text
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        delegate?.reloadData()
         dismiss(animated: true)
     }
     
