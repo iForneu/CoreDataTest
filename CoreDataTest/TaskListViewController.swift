@@ -9,6 +9,8 @@ import UIKit
 
 class TaskListViewController: UITableViewController {
 
+    
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -16,6 +18,7 @@ class TaskListViewController: UITableViewController {
         setupNavigationBar()
     }
     
+    //MARK: - Private Methods
     private func setupNavigationBar() {
         title = "Task list"
         navigationController?.navigationBar.prefersLargeTitles = true
